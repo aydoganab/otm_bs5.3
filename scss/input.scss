@@ -15,8 +15,11 @@ $font-size-root: 14px;
 $link-decoration: none;
 $link-shade-percentage: 25%;
 
-$focus-ring-width: .1rem;
-$focus-ring-opacity: .5;
+$focus-ring-width: .0625rem;
+$focus-ring-opacity: .75;
+
+$form-floating-label-opacity: .65;
+$form-floating-label-transform: scale(.75) translateY(-.5rem) translateX(.15rem);
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
@@ -46,6 +49,13 @@ $focus-ring-opacity: .5;
 
 // 8. Add additional custom code here
 
+.form-control.has-icon {
+  position: relative;
+  &:before{
+    position: absolute;
+    content: "a";
+  }
+}
 
 //9. FA
 $fa-font-path: "../fonts";

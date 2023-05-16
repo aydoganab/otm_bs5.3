@@ -111,9 +111,9 @@
   --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-  --bs-focus-ring-width: 0.1rem;
-  --bs-focus-ring-opacity: 0.5;
-  --bs-focus-ring-color: rgba(13, 110, 253, 0.5);
+  --bs-focus-ring-width: 0.0625rem;
+  --bs-focus-ring-opacity: 0.75;
+  --bs-focus-ring-color: rgba(13, 110, 253, 0.75);
   --bs-form-valid-color: #198754;
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
@@ -1859,7 +1859,7 @@ progress {
   --bs-btn-hover-border-color: transparent;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
-  --bs-btn-focus-box-shadow: 0 0 0 0.1rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  --bs-btn-focus-box-shadow: 0 0 0 0.0625rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
   display: inline-block;
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
   font-family: var(--bs-btn-font-family);
@@ -2292,7 +2292,7 @@ progress {
   background-color: var(--bs-body-bg);
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(13, 110, 253, 0.75);
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -2446,7 +2446,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(13, 110, 253, 0.75);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -2532,7 +2532,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(13, 110, 253, 0.75);
 }
 .form-check-input:checked {
   background-color: #0d6efd;
@@ -2614,7 +2614,7 @@ textarea.form-control-lg {
 
 .form-range {
   width: 100%;
-  height: 1.2rem;
+  height: 1.125rem;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -2625,10 +2625,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.1rem rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.0625rem rgba(13, 110, 253, 0.75);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.1rem rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.0625rem rgba(13, 110, 253, 0.75);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -2764,14 +2764,14 @@ textarea.form-control-lg {
 }
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  transform: scale(0.75) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  transform: scale(0.75) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label::after {
   position: absolute;
@@ -2796,7 +2796,7 @@ textarea.form-control-lg {
 }
 .form-floating > .form-control:-webkit-autofill ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  transform: scale(0.75) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control-plaintext ~ label {
   border-width: var(--bs-border-width) 0;
@@ -2938,7 +2938,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-success-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-success-rgb), 0.75);
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
@@ -2957,7 +2957,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-success-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-success-rgb), 0.75);
 }
 
 .was-validated .form-control-color:valid, .form-control-color.is-valid {
@@ -2971,7 +2971,7 @@ textarea.form-control-lg {
   background-color: var(--bs-form-valid-color);
 }
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-success-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-success-rgb), 0.75);
 }
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
   color: var(--bs-form-valid-color);
@@ -3028,7 +3028,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: var(--bs-form-invalid-border-color);
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-danger-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-danger-rgb), 0.75);
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
@@ -3047,7 +3047,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: var(--bs-form-invalid-border-color);
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-danger-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-danger-rgb), 0.75);
 }
 
 .was-validated .form-control-color:invalid, .form-control-color.is-invalid {
@@ -3061,7 +3061,7 @@ textarea.form-control-lg {
   background-color: var(--bs-form-invalid-color);
 }
 .was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
-  box-shadow: 0 0 0 0.1rem rgba(var(--bs-danger-rgb), 0.5);
+  box-shadow: 0 0 0 0.0625rem rgba(var(--bs-danger-rgb), 0.75);
 }
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
   color: var(--bs-form-invalid-color);
@@ -8355,6 +8355,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.form-control.has-icon {
+  position: relative;
+}
+.form-control.has-icon:before {
+  position: absolute;
+  content: "a";
+}
+
 /*!
  * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

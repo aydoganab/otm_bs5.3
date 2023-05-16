@@ -30,9 +30,9 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(rename('otm_bs52.min.js'))
         .pipe(gulp.dest("app/assets"))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        //.pipe(browserSync.reload({
+        //    stream: true
+        //}))
 });
 
 //FA
@@ -63,7 +63,7 @@ gulp.task('move_fonts', function () {
 gulp.task('move-assets', gulp.series('move_css','move_js','move_fonts'));
 
 //BrowserSync
-gulp.task('browserSync', function () {
+gulp.task('bSync', function () {
     browserSync.init({
         server: {
             baseDir: ['./app'],
@@ -75,10 +75,10 @@ gulp.task('browserSync', function () {
 
 //Watch
 gulp.task('watch', function () {
-    gulp.watch('scss/*.scss', gulp.series('sass'));
-    gulp.watch("app/*.html").on("change", browserSync.reload);
-    gulp.watch("app/assets/*.*").on("change", browserSync.reload);
+    gulp.watch('./scss/*.scss', gulp.series('sass'));
+    gulp.watch("./app/*.html").on("change", browserSync.reload);
+    gulp.watch("./app/assets/*.*").on("change", browserSync.reload);
 });
 
 //DEFAULT
-gulp.task('default', gulp.series('sass', 'js', 'fa', gulp.parallel('browserSync', 'watch')));
+gulp.task('default', gulp.series('sass', 'js', 'fa', gulp.parallel('bSync', 'watch')));

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>İTÜ Kimya Otomasyon</title>
     <link rel="stylesheet" href="assets/otm_bs53.css">
+    <style>
+        .form-control:focus{
+            border-left: 1px solid var(--bs-border-color);
+        }
+    </style>
 </head>
 <body>
 
@@ -18,20 +23,14 @@
         <div class="container-sm">
             <div class="row justify-content-center">
                 <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-6 col-sm-8 col-11">
-                    <form method="post" target="home.html" class="mb-3" autocomplete="off">
-                        <div class="input-group mb-2">
-                            <span class="input-group-text bg-transparent border-end-0"><i class="far fa-envelope"></i></span>
-                            <div class="form-floating">
-                                <input type="text" class="form-control border-start-0" id="em" placeholder="Email address">
-                                <label for="em">Email address</label>
-                            </div>
+                    <form method="post" action="home.html" class="mb-3" autocomplete="off">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="em" placeholder="Email address">
+                            <label for="em">Email address</label>
                         </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text bg-transparent border-end-0"><i class="fa fa-key"></i></span>
-                            <div class="form-floating">
-                                <input type="text" class="form-control border-start-0" id="ps" placeholder="Password">
-                                <label for="ps">Password</label>
-                            </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="ps" placeholder="Password">
+                            <label for="ps">Password</label>
                         </div>
                         <button type="submit" class="btn btn-outline-primary btn-lg w-100">Sign in</button>
                     </form>
