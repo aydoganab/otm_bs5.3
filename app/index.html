@@ -1,40 +1,37 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>İTÜ Kimya Otomasyon</title>
     <link rel="stylesheet" href="assets/otm_bs53.css">
-    <style>
-        .form-control:focus{
-            border-left: 1px solid var(--bs-border-color);
-        }
-    </style>
 </head>
 <body>
 
-<div class="position-absolute w-100 d-flex flex-column text-center py-3">
-    <h1><i class="far fa-life-ring"></i>tm</h1>
-    <p class="display-6 text-danger-emphasis">İTÜ Kimya Otomasyon</p>
+<div class="position-absolute w-100 d-flex flex-column text-center py-3 z-1">
+    <h1 class="text-danger"><i class="far fa-life-ring"></i>tm</h1>
+    <p class="fs-4 text-white">İTÜ Kimya Otomasyon</p>
 </div>
 
-<div class="position-absolute d-table w-100 h-100">
+<div class="position-absolute d-table w-100 h-100 bg-dark text-white">
     <div class="d-table-cell align-middle">
         <div class="container-sm">
             <div class="row justify-content-center">
                 <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-6 col-sm-8 col-11">
-                    <form method="post" action="home.html" class="mb-3" autocomplete="off">
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control" id="em" placeholder="Email address">
-                            <label for="em">Email address</label>
+                    <form method="get" action="home.html" class="mb-3" autocomplete="off">
+                        <div class="mb-3">
+                            <label for="em" class="form-label">Email address</label>
+                            <input type="text" class="form-control form-control-lg" id="em">
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="ps" placeholder="Password">
-                            <label for="ps">Password</label>
+                        <div class="mb-3">
+                            <label for="ps" class="form-label">Password</label>
+                            <input type="text" class="form-control form-control-lg" id="ps">
                         </div>
-                        <button type="submit" class="btn btn-outline-primary btn-lg w-100">Sign in</button>
+                        <div class="mb-4 text-end fs-medium">
+                            <a href="#" class="link-info"><i class="far fa-question-circle"></i> I forgot my password</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Sign in</button>
                     </form>
-                    <a href="#"><i class="far fa-question-circle"></i> I forgot my password</a>
                 </div>
             </div>
 
