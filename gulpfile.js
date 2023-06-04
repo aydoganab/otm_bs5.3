@@ -28,7 +28,7 @@ gulp.task('js', function () {
         .pipe(concat('otm_bs53.js'))
         .pipe(gulp.dest("app/assets"))
         .pipe(uglify())
-        .pipe(rename('otm_bs52.min.js'))
+        //.pipe(rename('otm_bs53.min.js'))
         .pipe(gulp.dest("app/assets"))
         //.pipe(browserSync.reload({
         //    stream: true
