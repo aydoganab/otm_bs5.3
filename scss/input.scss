@@ -5,47 +5,54 @@
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
-
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
 @import "colors";
 
 // 2. Include any default variable overrides here
-$enable-dark-mode: true;
+$enable-dark-mode: false;
 $enable-transitions: true;
 $enable-gradients: false;
 
-$color-mode-type: data;
 
 $prefix: bs-;
+
+$component-active-color:      $white;
+$component-active-bg:         $primary;
 
 $font-family-sans-serif: "Inter", sans-serif;
 $font-size-root: 14px;
 
 $body-bg: #f3f2ef;
 
-$navbar-brand-font-size: 1.7rem;
+$navbar-brand-font-size: 2rem;
+$navbar-brand-padding-y: 0;
 $navbar-light-brand-color: $indigo-500;
 $navbar-light-brand-hover-color: $indigo-700;
+$navbar-padding-y: 0;
 
 $link-decoration: none;
 $link-shade-percentage: 30%;
 
-$focus-ring-width: 1.5px;
-$focus-ring-opacity: .85;
+$focus-ring-width:      1px;
+$focus-ring-opacity:    .9;
+$focus-ring-color:      rgba($primary, $focus-ring-opacity);
+$focus-ring-blur:       0;
+$focus-ring-box-shadow: inset 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+
 
 $form-floating-label-opacity: .65;
 $form-floating-label-transform: scale(.75) translateY(-.5rem) translateX(.15rem);
 
 $form-label-font-weight: 500;
 $form-label-margin-bottom: .25rem;
+$input-bg: $gray-100;
+
+$form-check-input-checked-color: $component-active-color;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m4 10 4 4 7-9'/></svg>");
 
 $btn-active-bg-shade-amount: 25%;
 
 //dropdowns
-//$dropdown-bg: var(--#{$prefix}white);
-
-//dark mode variables
+$dropdown-bg: $white;
 
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -54,6 +61,8 @@ $btn-active-bg-shade-amount: 25%;
 // 4. Include any default map overrides here
 
 // 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
@@ -86,6 +95,7 @@ $btn-active-bg-shade-amount: 25%;
 .fs-medium{
   font-size: 0.95rem;
 }
+
 
 //9. FA
 $fa-font-path: "../fonts";
