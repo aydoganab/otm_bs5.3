@@ -19,7 +19,7 @@ $component-active-color:      $white;
 $component-active-bg:         $primary;
 
 $font-family-sans-serif: "Inter", sans-serif;
-$font-size-root: 16px;
+$font-size-root: 14px;
 
 $font-size-base: 1rem;
 
@@ -67,6 +67,9 @@ $breadcrumb-margin-bottom: 0;
 //dropdowns
 $dropdown-border-color: $gray-300;
 $dropdown-item-padding-y: .5rem;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-active-bg: $gray-300;
+$dropdown-link-active-color: $black;
 
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -109,6 +112,14 @@ $dropdown-item-padding-y: .5rem;
 
 .fs-medium{
   font-size: 0.95rem;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.dropdown-menu{
+  @extend .shadow;
 }
 
 /*navbar*/
