@@ -20,7 +20,7 @@
         <a href="#"><i class="far fa-life-ring"></i>tm</a>
       </div>
       
-      <ul class="nav justify-content-center d-none d-md-flex">
+      <ul class="nav justify-content-center d-none d-md-flex" id="otm-menu">
         <li class="nav-item active">
           <a class="nav-link" aria-current="page" href="#">ARAŞTIRMA</a>
         </li>
@@ -35,7 +35,7 @@
         </li>
       </ul>
       
-      <ul class="nav align-self-stretch d-none d-md-flex">
+      <ul class="nav nav-user align-self-stretch d-none d-md-flex">
         <li class="nav-item dropdown">
           <a href="#" class="align-items-center d-flex dropdown-toggle h-100 nav-link position-relative py-0" role="button" data-bs-toggle="dropdown">
             <img class="rounded-circle" src="assets/user_thumb.jpg" alt="user image">
@@ -43,7 +43,7 @@
           <ul class="dropdown-menu">
             <li class="dropdown-header">Abdullah Aydoğan</li>
             <li><a class="dropdown-item" href="#">Change password</a></li>
-            <li><a class="dropdown-item" href="#">Update image</a></li>
+            <li><a class="dropdown-item" href="#">Change my picture</a></li>
             <li><a class="dropdown-item" href="#">Contact info</a></li>
           </ul>
         </li>
@@ -82,99 +82,49 @@
     
     <div class="row justify-content-center">
       <div class="col-xl-10">
-        
-        <div class="card shadow-sm my-3 my-md-4 my-xl-5">
-          <div class="card-body pb-0">
-            <div class="d-flex align-items-center flex-md-row flex-column">
-              <img class="img-fluid rounded-circle" style="max-height: 170px" src="https://otm.kimya.itu.edu.tr/userpics/5561E3ED-A1CC-C964-DB04-8BC33736EA02.jpg">
-              <div class="ps-md-4 pt-2 pt-md-0">
-                
-                <h4 class="text-dark text-center text-sm-start ps-sm-2">Doç. Dr. Abdullah Aydoğan</h4>
-                
-                <div class="d-none d-md-table">
-                  <table class="table table-borderless align-middle">
-                    <tbody>
-                    <tr>
-                      <th scope="row"><i class="fa fa-user-plus fa-fw fa-lg"></i> <span class="d-none d-lg-inline-block">Sisteme Kayıt Tarihi</span></th>
-                      <td>18.11.2005</td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><i class="fa fa-sign-in-alt fa-fw fa-lg"></i> <span class="d-none d-lg-inline-block">Son Oturum Açma</span></th>
-                      <td>07.06.2023 12:45:09</td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><i class="far fa-clock fa-fw fa-lg"></i> <span class="d-none d-lg-inline-block">Hesap Deaktivasyon Tarihi</span></th>
-                      <td>14.11.2057</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <i class="far fa-envelope fa-fw fa-lg"></i> <span class="d-none d-lg-inline-block">Eposta</span>
-                      </th>
-                      <td>aydoganab@itu.edu.tr</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">
-                        <i class="fa fa-envelope fa-fw fa-lg"></i> <span class="d-none d-lg-inline-block">İletişim Eposta</span>
-                      </th>
-                      <td>
-                        aaydogan@gmail.com <a href="https://otm.kimya.itu.edu.tr/o/pages/genel/iletisim-bilgilerimi-guncelle" class="btn btn-outline-primary btn-sm py-0 rounded-pill">Güncelle</a>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+
+        <h4 class="display-1 py-3 pb-2 pb-md-5 text-center">Abdullah Aydoğan</h4>
+
+        <div class="text-center mb-4 mb-md-5">
+          <img class="rounded-circle img-fluid" src="assets/user.jpg" alt="user image" style="max-height: 200px">
+        </div>
+
+        <div class="hstack gap-3 justify-content-center mb-4 mb-md-5">
+          <div><i class="fa fa-sign-in-alt"></i> Last login was at 6 June 2020, 23:03</div>
+          <div class="vr"></div>
+          <div><i class="fa fa-clock"></i> Account will be deactivated in 30 days</div>
+        </div>
+
+        <div class="row justify-content-center g-2 mb-4 mb-md-5">
+          <div class="col-auto">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+              <i class="fa fa-user-circle"></i> Change my picture
+            </a>
           </div>
-          <div class="card-body">
-            <div class="row g-2 g-md-3 g-lg-4">
-              <div class="col-auto">
-                <a href="https://otm.kimya.itu.edu.tr/o/pages/genel/resmimi-guncelle" class="icon-link icon-link-hover"><i class="fa fa-image fa-fw"></i> Resmimi güncelle</a>
-              </div>
-              <div class="col-auto">
-                <a href="https://otm.kimya.itu.edu.tr/o/pages/genel/iletisim-bilgilerimi-guncelle" class="text-nowrap"><i class="fas fa-phone-alt fa-fw"></i> İletişim bilgilerim</a>
-              </div>
-              <div class="col-auto">
-                <a href="https://otm.kimya.itu.edu.tr/o/pages/genel/sifremi-degistir" class="text-nowrap"><i class="fa fa-key fa-fw"></i> Şifremi değiştir</a>
-              </div>
-              <div class="col-auto">
-                <a href="https://otm.kimya.itu.edu.tr/o/pages/genel/email-listeleri" class="text-nowrap link-danger"><i class="fa fa-square-envelope"></i> Email Listeleri</a>
-              </div>
-            </div>
+          <div class="col-auto">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+              <i class="fa fa-phone-alt"></i> Contact info
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+              <i class="fa fa-key"></i> Change password
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill">
+              <i class="fa fa-envelope"></i> Email lists
+            </a>
           </div>
         </div>
-        
-        <div class="card mb-3">
-          <h5 class="card-header">
-            <i class="fa-solid fa-display fa-fw me-2"></i><span class="fw-bold fs-medium">En çok ziyaret ettiğiniz sayfalar</span>
-          </h5>
-          
-          <div class="card-body">
-            <div class="row g-1 g-md-2">
-              <div class="col-6 col-lg-3">
-                <a class="btn btn-flat-dark text-start w-100" href="https://otm.kimya.itu.edu.tr/o/pages/research/ELN-Experiments">
-                  <small class="text-muted">ARAŞTIRMA</small>
-                  <h6 class="text-truncate mb-2 mt-1"><i class="fa pe-2 fa-flask-vial"></i>ELN Experiments</h6>
-                </a>
+
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="card shadow-sm">
+              <div class="card-header bg-primary-subtle text-dark">
+                <i class="fa fa-desktop"></i> Most visited pages
               </div>
-              <div class="col-6 col-lg-3">
-                <a class="btn btn-flat-dark text-start w-100" href="https://otm.kimya.itu.edu.tr/o/pages/yonetici/kullanici-bilgileri">
-                  <small class="text-muted">YÖNETİCİ</small>
-                  <h6 class="text-truncate mb-2 mt-1"><i class="fa pe-2 fa-info-circle"></i>Kullanıcı bilgileri</h6>
-                </a>
-              </div>
-              <div class="col-6 col-lg-3">
-                <a class="btn btn-flat-dark text-start w-100" href="https://otm.kimya.itu.edu.tr/o/pages/yonetici/cdxml-parser">
-                  <small class="text-muted">ARAŞTIRMA</small>
-                  <h6 class="text-truncate mb-2 mt-1"><i class="fa pe-2 fa-code"></i>CDXML Parser</h6>
-                </a>
-              </div>
-              <div class="col-6 col-lg-3">
-                <a class="btn btn-flat-dark text-start w-100" href="https://otm.kimya.itu.edu.tr/o/pages/research/eln-settings">
-                  <small class="text-muted">ARAŞTIRMA</small>
-                  <h6 class="text-truncate mb-2 mt-1"><i class="fa pe-2 fa-cog"></i>ELN Settings</h6>
-                </a>
-              </div>
+              <div class="card-body"></div>
             </div>
           </div>
         </div>
