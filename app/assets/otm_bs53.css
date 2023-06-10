@@ -1840,7 +1840,7 @@ progress {
   --bs-btn-hover-border-color: #0a58ca;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a53be;
+  --bs-btn-active-bg: #084298;
   --bs-btn-active-border-color: #0a53be;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
@@ -1857,7 +1857,7 @@ progress {
   --bs-btn-hover-border-color: #565e64;
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #51585e;
+  --bs-btn-active-bg: #41464b;
   --bs-btn-active-border-color: #51585e;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
@@ -1874,7 +1874,7 @@ progress {
   --bs-btn-hover-border-color: #146c43;
   --bs-btn-focus-shadow-rgb: 60, 153, 110;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #13653f;
+  --bs-btn-active-bg: #0f5132;
   --bs-btn-active-border-color: #13653f;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
@@ -1925,7 +1925,7 @@ progress {
   --bs-btn-hover-border-color: #b02a37;
   --bs-btn-focus-shadow-rgb: 225, 83, 97;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #a52834;
+  --bs-btn-active-bg: #842029;
   --bs-btn-active-border-color: #a52834;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
@@ -1942,7 +1942,7 @@ progress {
   --bs-btn-hover-border-color: #c6c7c8;
   --bs-btn-focus-shadow-rgb: 211, 212, 213;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #babbbc;
+  --bs-btn-active-bg: #959596;
   --bs-btn-active-border-color: #babbbc;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
@@ -10173,6 +10173,38 @@ textarea.form-control-lg {
 }
 .otm-nav .nav-user {
   --bs-nav-link-padding-x: 1.5rem;
+}
+
+.btn-outline-primary {
+  --bs-btn-active-bg: #084298;
+}
+
+.btn-outline-secondary {
+  --bs-btn-active-bg: #41464b;
+}
+
+.btn-outline-success {
+  --bs-btn-active-bg: #0f5132;
+}
+
+.btn-outline-info {
+  --bs-btn-active-bg: #087990;
+}
+
+.btn-outline-warning {
+  --bs-btn-active-bg: #997404;
+}
+
+.btn-outline-danger {
+  --bs-btn-active-bg: #842029;
+}
+
+.btn-outline-light {
+  --bs-btn-active-bg: #f6f7f8;
+}
+
+.btn-outline-dark {
+  --bs-btn-active-bg: #141619;
 }
 
 /*!

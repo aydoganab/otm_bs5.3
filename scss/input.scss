@@ -15,20 +15,20 @@ $enable-gradients: false;
 
 $prefix: bs-;
 
-$component-active-color:      $white;
-$component-active-bg:         $primary;
+$component-active-color: $white;
+$component-active-bg: $primary;
 
 $font-family-sans-serif: "Inter", sans-serif;
 $font-size-root: 14px;
 
 $font-size-base: 1rem;
 
-$h1-font-size:                $font-size-base * 1.5;
-$h2-font-size:                $font-size-base * 2;
-$h3-font-size:                $font-size-base * 1.75;
-$h4-font-size:                $font-size-base * 1.5;
-$h5-font-size:                $font-size-base * 1.25;
-$h6-font-size:                $font-size-base;
+$h1-font-size: $font-size-base * 1.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
 
 $display-font-sizes: (
         1: 2rem,
@@ -48,10 +48,10 @@ $navbar-padding-y: 0;
 $link-decoration: none;
 $link-shade-percentage: 30%;
 
-$focus-ring-width:      1px;
-$focus-ring-opacity:    .9;
-$focus-ring-color:      rgba($primary, $focus-ring-opacity);
-$focus-ring-blur:       0;
+$focus-ring-width: 1px;
+$focus-ring-opacity: .9;
+$focus-ring-color: rgba($primary, $focus-ring-opacity);
+$focus-ring-blur: 0;
 $focus-ring-box-shadow: inset 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
 
 
@@ -63,10 +63,7 @@ $form-label-margin-bottom: .25rem;
 
 
 $form-check-input-checked-color: $component-active-color;
-$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m4 10 4 4 7-9'/></svg>");
-
-$btn-active-bg-shade-amount: 25%;
-
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m4 10 4 4 7-9'/></svg>");
 
 $breadcrumb-margin-bottom: 0;
 
@@ -77,6 +74,8 @@ $dropdown-link-hover-bg: $gray-200;
 $dropdown-link-active-bg: $gray-300;
 $dropdown-link-active-color: $black;
 
+//buttons
+$btn-active-bg-shade-amount: 40%;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 
@@ -116,59 +115,68 @@ $dropdown-link-active-color: $black;
 
 // 8. Add additional custom code here
 
-.fs-medium{
+.fs-medium {
   font-size: 0.95rem;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   @extend .shadow;
 }
 
 /*navbar*/
-.otm-nav{
+.otm-nav {
 
-  .otm-brand{
+  .otm-brand {
     font-size: 1.75rem;
     font-weight: 500;
     letter-spacing: 0.0625rem;
   }
 
-  .nav{
+  .nav {
     --#{$prefix}nav-link-font-weight: 400;
     --#{$prefix}nav-link-padding-x: 2rem;
     --#{$prefix}nav-link-padding-y: 1.2rem;
     --#{$prefix}nav-link-color: #{$body-color};
     --#{$prefix}nav-link-hover-color: #{$body-color};
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       --#{$prefix}nav-link-padding-x: 1rem;
     }
 
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       --#{$prefix}nav-link-padding-y: .5rem;
     }
 
     .nav-item {
-      &:hover{
+      &:hover {
         background-color: $gray-100;
       }
-      &:active, &.show, .nav-link.show{
+
+      &:active, &.show, .nav-link.show {
         background-color: shift-color($gray-100, 3%);
       }
-      &.active{
+
+      &.active {
         background-color: shift-color($gray-100, 5%);
       }
     }
   }
 
-  .nav-user{
+  .nav-user {
     --#{$prefix}nav-link-padding-x: 1.5rem;
   }
 
+}
+
+
+//buttons
+@each $color, $value in $theme-colors {
+      $active-background: shade-color($value, 40%);
+      --#{$prefix}btn-active-bg: #{$active-background};
 }
 
 //9. FA
