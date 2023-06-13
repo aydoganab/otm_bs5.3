@@ -107,6 +107,7 @@ $btn-active-bg-shade-amount: 40%;
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/tooltip";
 @import "../node_modules/bootstrap/scss/close";
 @import "../node_modules/bootstrap/scss/helpers";
 
@@ -173,11 +174,145 @@ $btn-active-bg-shade-amount: 40%;
 }
 
 
-//buttons
+//outline buttons
 @each $color, $value in $theme-colors {
-      $active-background: shade-color($value, 40%);
-      --#{$prefix}btn-active-bg: #{$active-background};
+  .btn-outline-#{$color} {
+    $active-background: shift-color($value, 25%);
+    $active-color: color-contrast($active-background);
+    --#{$prefix}btn-active-color: #{$active-color};
+    --#{$prefix}btn-active-bg: #{$active-background};
+  }
 }
+
+//icon buttons
+.btn-icon{
+  @extend .btn;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0 !important;
+  position: relative;
+  z-index: 0;
+  font-size: 1.125rem;
+  width: 2.3453rem;
+  height: 2.3453rem;
+}
+
+.btn-icon-sm{
+  @extend .btn-icon;
+  font-size: 1rem !important;
+  width: 1.908rem !important;
+  height: 1.908rem !important;
+}
+
+$icon-button-colors: (
+        "primary":    $primary,
+        "success":    $success,
+        "danger":     $danger,
+        "dark":       $dark
+);
+
+@each $color-bi, $value in $icon-button-colors{
+  $background: transparent;
+  $border: transparent;
+  $color: $value;
+  $hover-color: shade-color($value, 15%);
+  $hover-background: tint-color($value, 85%);
+  $hover-border: $hover-background;
+  $active-color: shade-color($value, 35%);
+  //$active-color: color-contrast($hover-background);
+  $active-background: tint-color($value, 70%);
+  $active-border: $active-background;
+  $disabled-color: tint-color($value, 10%);
+  $disabled-background: $background;
+  $disabled-border: $border;
+  .btn-icon-#{$color-bi}{
+    --#{$prefix}btn-color: #{$color};
+    --#{$prefix}btn-bg: #{$background};
+    --#{$prefix}btn-border-color: #{$border};
+    --#{$prefix}btn-hover-color: #{$hover-color};
+    --#{$prefix}btn-hover-bg: #{$hover-background};
+    --#{$prefix}btn-hover-border-color: #{$hover-border};
+    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+    --#{$prefix}btn-active-color: #{$active-color};
+    --#{$prefix}btn-active-bg: #{$active-background};
+    --#{$prefix}btn-active-border-color: #{$active-border};
+    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+    --#{$prefix}btn-disabled-color: #{$disabled-color};
+    --#{$prefix}btn-disabled-bg: #{$disabled-background};
+    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  }
+}
+
+//flat buttons
+@each $color-fl, $value in $icon-button-colors{
+  $background: transparent;
+  $border: transparent;
+  $color: $value;
+  $hover-color: shade-color($value, 10%);
+  $hover-background: tint-color($value, 90%);
+  $hover-border: $hover-background;
+  $active-color: shade-color($value, 20%);
+  //$active-color: color-contrast($hover-background);
+  $active-background: tint-color($value, 80%);
+  $active-border: $background;
+  $disabled-color: tint-color($value, 10%);
+  $disabled-background: $background;
+  $disabled-border: $border;
+  .btn-flat-#{$color-fl}{
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-color: #{$color};
+    --#{$prefix}btn-bg: #{$background};
+    --#{$prefix}btn-border-color: #{$border};
+    --#{$prefix}btn-hover-color: #{$hover-color};
+    --#{$prefix}btn-hover-bg: #{$hover-background};
+    --#{$prefix}btn-hover-border-color: #{$hover-border};
+    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+    --#{$prefix}btn-active-color: #{$active-color};
+    --#{$prefix}btn-active-bg: #{$active-background};
+    --#{$prefix}btn-active-border-color: #{$active-border};
+    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+    --#{$prefix}btn-disabled-color: #{$disabled-color};
+    --#{$prefix}btn-disabled-bg: #{$disabled-background};
+    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  }
+}
+
+//reduced buttons
+@each $color-rd, $value in $icon-button-colors{
+  $background: transparent;
+  $border: tint-color($value, 10%);
+  $color: $value;
+  $hover-color: shade-color($value, 15%);
+  $hover-background: tint-color($value, 92%);
+  $hover-border:$border;
+  $active-color: shade-color($value, 20%);
+  //$active-color: color-contrast($hover-background);
+  $active-background: tint-color($value, 80%);
+  $active-border: $border;
+  $disabled-color: tint-color($value, 10%);
+  $disabled-background: $background;
+  $disabled-border: $border;
+  .btn-reduced-#{$color-rd}{
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-color: #{$color};
+    --#{$prefix}btn-bg: #{$background};
+    --#{$prefix}btn-border-color: #{$border};
+    --#{$prefix}btn-hover-color: #{$hover-color};
+    --#{$prefix}btn-hover-bg: #{$hover-background};
+    --#{$prefix}btn-hover-border-color: #{$hover-border};
+    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+    --#{$prefix}btn-active-color: #{$active-color};
+    --#{$prefix}btn-active-bg: #{$active-background};
+    --#{$prefix}btn-active-border-color: #{$active-border};
+    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+    --#{$prefix}btn-disabled-color: #{$disabled-color};
+    --#{$prefix}btn-disabled-bg: #{$disabled-background};
+    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  }
+}
+
 
 //9. FA
 $fa-font-path: "../fonts";
