@@ -5,9 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>İTÜ Kimya Otomasyon</title>
   <link rel="stylesheet" href="assets/otm_bs53.css">
-
+  <script src="assets/otm_bs53.js"></script>
+  <script src="assets/main_bs5.3.js"></script>
 </head>
 <body>
+
+<!--modal-->
+<div class="modal" tabindex="-1" data-bs-backdrop="static" id="otm-modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="otm-page-wrap">
   
@@ -75,8 +95,8 @@
       </ol>
     </nav>
     <div>
-      <button type="button" class="btn btn-flat-danger" data-bs-title="Report error about this page" data-bs-toggle="tooltip"><i class="far fa-frown fa-lg"></i></button>
-      <button type="button" class="btn btn-flat-dark"><i class="fa fa-info-circle fa-lg"></i></button>
+      <button type="button" class="btn btn-sm btn-flat-danger" title="Report error about this page" data-bs-toggle="tooltip"><i class="far fa-frown fa-lg"></i></button>
+      <button type="button" class="btn btn-sm btn-flat-dark"><i class="fa fa-info-circle fa-lg"></i></button>
     </div>
   </div>
   
@@ -101,7 +121,7 @@
 
         <div class="row justify-content-center g-2 mb-4 mb-md-5">
           <div class="col-auto">
-            <a href="#" class="btn btn-sm btn-reduced-primary rounded-pill">
+            <a href="#" class="btn btn-sm btn-reduced-primary rounded-pill" id="modal-deneme">
               <i class="fa fa-user-circle"></i> Change my picture
             </a>
           </div>
@@ -177,7 +197,11 @@
 
 </div>
 
+<script>
+  $('#modal-deneme').click(function () {
+    $('#otm-modal').modal('show');
+  });
+</script>
 
-<script src="assets/otm_bs53.js"></script>
 </body>
 </html>

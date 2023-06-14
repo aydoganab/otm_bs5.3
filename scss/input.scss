@@ -15,6 +15,8 @@ $enable-gradients: false;
 
 $prefix: bs-;
 
+$spacer: 1rem;
+
 $component-active-color: $white;
 $component-active-bg: $primary;
 
@@ -77,7 +79,20 @@ $dropdown-link-active-color: $black;
 //buttons
 $btn-active-bg-shade-amount: 40%;
 
-// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+//tooltip
+$tooltip-opacity: 1;
+$tooltip-bg: shade-color($secondary, 25%);
+$tooltip-border-radius: var(--#{$prefix}border-radius);
+$tooltip-padding-y: $spacer * .3125;
+$tooltip-padding-x: $spacer * .625;
+//$tooltip-arrow-width: 0;
+//$tooltip-arrow-height: 0;
+
+//modal
+$modal-header-padding-y: .5rem;
+$modal-header-border-width: 0;
+
+  // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 
 
 // 4. Include any default map overrides here
@@ -107,6 +122,7 @@ $btn-active-bg-shade-amount: 40%;
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/bootstrap/scss/tooltip";
 @import "../node_modules/bootstrap/scss/close";
 @import "../node_modules/bootstrap/scss/helpers";
@@ -127,6 +143,17 @@ $btn-active-bg-shade-amount: 40%;
 .dropdown-menu {
   @extend .shadow;
 }
+
+.tooltip-arrow{
+  display: none !important;
+}
+
+//modal
+.modal-header {
+  @extend .modal-header;
+  background-color: tint-color($primary-bg-subtle, 60%);
+}
+
 
 /*navbar*/
 .otm-nav {
