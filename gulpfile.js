@@ -14,9 +14,9 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({browserlist: [">= 1%", "last 2 major version", "not dead", "Chrome >= 60", "Firefox >= 60", "Edge >= 60", "iOS >= 12", "Safari >= 12", "Android >= 8", "not Explorer <= 11"]}))
         .pipe(rename('otm_bs53.css'))
         .pipe(gulp.dest('app/assets'))
-        //.pipe(csso({comments:false}))
-        //.pipe(rename('otm_bs52.min.css'))
-        //.pipe(gulp.dest('app/assets'))
+        .pipe(csso({comments:false}))
+        .pipe(rename('otm_bs52.min.css'))
+        .pipe(gulp.dest('app/assets'))
         .pipe(browserSync.reload({
             stream: true
         }))

@@ -20,7 +20,8 @@ $spacer: 1rem;
 $component-active-color: $white;
 $component-active-bg: $primary;
 
-$font-family-sans-serif: "Inter", sans-serif;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 $font-size-root: 14px;
 
 $font-size-base: 1rem;
@@ -82,7 +83,8 @@ $btn-active-bg-shade-amount: 40%;
 //tooltip
 $tooltip-opacity: 1;
 $tooltip-font-size: .9rem;
-$tooltip-bg: shade-color($secondary, 30%);
+//oltip-bg: shade-color($secondary, 30%);
+$tooltip-bg: $blue-600;
 $tooltip-border-radius: var(--#{$prefix}border-radius);
 $tooltip-padding-y: $spacer * .5;
 $tooltip-padding-x: $spacer * .5;
@@ -154,7 +156,6 @@ $modal-header-border-width: 0;
   @extend .modal-header;
   background-color: tint-color($primary-bg-subtle, 60%);
 }
-
 
 /*navbar*/
 .otm-nav {
