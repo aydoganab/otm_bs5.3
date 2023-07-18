@@ -71,7 +71,7 @@ $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://w
 $breadcrumb-margin-bottom: 0;
 
 //dropdowns
-$dropdown-border-color: $gray-300;
+$dropdown-border-color: $gray-400;
 $dropdown-item-padding-y: .5rem;
 $dropdown-link-hover-bg: $gray-200;
 $dropdown-link-active-bg: $gray-300;
@@ -87,7 +87,7 @@ $tooltip-font-size: .9rem;
 $tooltip-bg: $blue-600;
 $tooltip-border-radius: var(--#{$prefix}border-radius);
 $tooltip-padding-y: $spacer * .5;
-$tooltip-padding-x: $spacer * .5;
+$tooltip-padding-x: $spacer * .6;
 //$tooltip-arrow-width: 0;
 //$tooltip-arrow-height: 0;
 
@@ -135,6 +135,10 @@ $modal-header-border-width: 0;
 
 // 8. Add additional custom code here
 
+.d-none{
+  display: none;
+}
+
 .fs-medium {
   font-size: 0.95rem;
 }
@@ -144,7 +148,7 @@ $modal-header-border-width: 0;
 }
 
 .dropdown-menu {
-  @extend .shadow;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 
 .tooltip-arrow{
@@ -167,7 +171,7 @@ $modal-header-border-width: 0;
   }
 
   .nav {
-    --#{$prefix}nav-link-font-weight: 400;
+    --#{$prefix}nav-link-font-weight: 500;
     --#{$prefix}nav-link-padding-x: 2rem;
     --#{$prefix}nav-link-padding-y: 1.2rem;
     --#{$prefix}nav-link-color: #{$body-color};
@@ -198,7 +202,11 @@ $modal-header-border-width: 0;
 
   .nav-user {
     --#{$prefix}nav-link-padding-x: 1.5rem;
+    @include media-breakpoint-down(xl) {
+      --#{$prefix}nav-link-padding-x: 1rem;
+    }
   }
+
 
 }
 
