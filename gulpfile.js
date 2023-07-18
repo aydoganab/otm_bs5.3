@@ -15,7 +15,7 @@ gulp.task('sass', function () {
         .pipe(rename('otm_bs53.css'))
         .pipe(gulp.dest('app/assets'))
         .pipe(csso({comments:false}))
-        .pipe(rename('otm_bs52.min.css'))
+        .pipe(rename('otm_bs53.min.css'))
         .pipe(gulp.dest('app/assets'))
         .pipe(browserSync.reload({
             stream: true
