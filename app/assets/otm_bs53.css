@@ -5510,7 +5510,7 @@ textarea.form-control-lg {
   --bs-toast-padding-x: 0.75rem;
   --bs-toast-padding-y: 0.5rem;
   --bs-toast-spacing: 1.5rem;
-  --bs-toast-max-width: 350px;
+  --bs-toast-max-width: auto;
   --bs-toast-font-size: 1rem;
   --bs-toast-color: ;
   --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
@@ -10800,6 +10800,10 @@ textarea.form-control-lg {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.dropdown-toggle-nocaret:after {
+  content: none;
 }
 
 .dropdown-menu {

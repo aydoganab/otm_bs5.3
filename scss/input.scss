@@ -97,6 +97,7 @@ $modal-header-border-width: 0;
 
 //toast
 $toast-font-size: 1rem;
+$toast-max-width: auto;
 
   // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 
@@ -151,6 +152,10 @@ $toast-font-size: 1rem;
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.dropdown-toggle-nocaret:after{
+  content: none;
 }
 
 .dropdown-menu {
