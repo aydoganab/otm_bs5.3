@@ -15,7 +15,7 @@ $enable-shadows: false;
 $enable-transitions: true;
 
 
-$prefix: AA-;
+$prefix: bs-;
 
 $spacer: 1rem;
 
@@ -70,6 +70,8 @@ $form-label-margin-bottom: .25rem;
 $form-check-input-checked-color: $component-active-color;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m4 10 4 4 7-9'/></svg>");
 
+$form-label-font-size:0.92857rem;
+
 $breadcrumb-margin-bottom: 0;
 
 //dropdowns
@@ -86,10 +88,10 @@ $btn-active-bg-shade-amount: 30%;
 $tooltip-opacity: 1;
 $tooltip-font-size: .9rem;
 //oltip-bg: shade-color($secondary, 30%);
-$tooltip-bg: $blue-600;
-$tooltip-border-radius: var(--#{$prefix}border-radius);
+$tooltip-bg: $gray-700;
+$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
 $tooltip-padding-y: $spacer * .5;
-$tooltip-padding-x: $spacer * .6;
+$tooltip-padding-x: $spacer * .9;
 //$tooltip-arrow-width: 0;
 //$tooltip-arrow-height: 0;
 
@@ -134,6 +136,7 @@ $toast-max-width: auto;
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/bootstrap/scss/tooltip";
 @import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/badge";
 @import "../node_modules/bootstrap/scss/progress";
 @import "../node_modules/bootstrap/scss/toasts";
 @import "../node_modules/bootstrap/scss/close";
@@ -156,8 +159,12 @@ $toast-max-width: auto;
   cursor: pointer;
 }
 
-.dropdown-toggle-nocaret:after{
-  content: none;
+.dropdown-toggle-nocaret::after{
+  display: none !important;
+}
+
+.dropdown-toggle.no-caret::after{
+  display: none !important;
 }
 
 .dropdown-menu {
@@ -347,7 +354,7 @@ $icon-button-colors: (
   //$active-color: color-contrast($hover-background);
   $active-background: tint-color($value, 85%);
   //$active-border: $border;
-  $active-border: shift-color($active-background, 30%);
+  $active-border: shift-color($active-background, 20%);
   $disabled-color: tint-color($value, 10%);
   $disabled-background: $background;
   $disabled-border: $border;
@@ -368,6 +375,45 @@ $icon-button-colors: (
     --#{$prefix}btn-disabled-bg: #{$disabled-background};
     --#{$prefix}btn-disabled-border-color: #{$disabled-border};
   }
+}
+
+//border hovers
+@each $color, $value in $theme-colors {
+  .border-hover-#{$color} {
+    &:hover {
+      border-color: $value !important;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .table-hover-#{$color} {
+    &:hover {
+      background-color: tint-color($value, 80%) !important;
+    }
+  }
+}
+
+//shadow hover
+.shadow-hover {
+  &:hover {
+    @extend .shadow;
+  }
+}
+
+.shadow-sm-hover {
+  &:hover {
+    @extend .shadow-sm;
+  }
+}
+
+/*page title*/
+.page-title{
+  padding-top: .5rem;
+  padding-bottom: 1.5rem;
+  color: $danger;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 

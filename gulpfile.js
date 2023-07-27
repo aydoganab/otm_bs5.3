@@ -46,21 +46,22 @@ gulp.task('fa', function () {
 
 //move assets
 gulp.task('move_css', function () {
-    return gulp.src('app/assets/*.css')
-        .pipe(gulp.dest('../otmnew/o/css'))
+    return gulp.src('app/assets/otm_bs53.min.css')
+        .pipe(gulp.dest('../xampp/htdocs/otmnew/o/css'))
 });
 
 gulp.task('move_js', function () {
-    return gulp.src('app/assets/*.min.js')
-        .pipe(gulp.dest('../otmnew/o/js'))
+    return gulp.src('app/assets/otm_bs53.js')
+        .pipe(gulp.dest('../xampp/htdocs/otmnew/o/js'))
 });
 
 gulp.task('move_fonts', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/!(*brands*)')
-        .pipe(gulp.dest('../otmnew/o/fonts'))
+        .pipe(gulp.dest('../xampp/htdocs/otmnew/o/fonts'))
 });
 
 gulp.task('move-assets', gulp.series('move_css','move_js','move_fonts'));
+gulp.task('move-css-js', gulp.series('move_css','move_js'));
 
 //BrowserSync
 gulp.task('bSync', function () {
