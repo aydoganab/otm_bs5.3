@@ -29,6 +29,15 @@
   </div>
 </div>
 
+<!--offCanvas-->
+<div class="offcanvas" tabindex="-1" id="otm-offcanvas" data-bs-backdrop="static">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"></div>
+</div>
+
 <div class="otm-page-wrap">
   
   <!--nav-->
@@ -92,7 +101,7 @@
       <div class="col-auto d-lg-none">
         <ul class="nav">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" id="otm-ocMenu">
               <i class="fa fa-bars-staggered fa-fw"></i>
             </a>
           </li>
@@ -160,7 +169,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-11">
             <div class="card shadow-sm">
-              <div class="card-header bg-primary-subtle text-dark py-md-3 border-bottom-0">
+              <div class="card-header bg-primary-subtle text-dark py-md-3 border-bottom-0 fw-semibold">
                 <i class="fa fa-desktop"></i> Most visited pages
               </div>
               <div class="card-body py-2 py-md-3 py-lg-4">
@@ -215,6 +224,13 @@
 <script>
   $('#modal-deneme').click(function () {
     $('#otm-modal').modal('show');
+  });
+
+  $('#otm-ocMenu').click(function (e) {
+      e.preventDefault();
+      $('.offcanvas-body').html('');
+      $('#otm-menu').clone().removeAttr('class').addClass('nav flex-column').append('<li class="nav-item"><a href="#" class="nav-link">Log out</a></li>').appendTo('.offcanvas-body');
+      $('#otm-offcanvas').addClass('offcanvas-end').offcanvas('show');
   });
 </script>
 
