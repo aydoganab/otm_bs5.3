@@ -2959,12 +2959,12 @@ textarea.form-control-lg {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.5rem 0.9rem;
+  padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: var(--bs-success);
-  border-radius: var(--bs-border-radius-xl);
+  border-radius: var(--bs-border-radius);
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -3049,12 +3049,12 @@ textarea.form-control-lg {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.5rem 0.9rem;
+  padding: 0.25rem 0.5rem;
   margin-top: 0.1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: var(--bs-danger);
-  border-radius: var(--bs-border-radius-xl);
+  border-radius: var(--bs-border-radius);
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -5250,14 +5250,14 @@ textarea.form-control-lg {
 .tooltip {
   --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;
-  --bs-tooltip-padding-x: 0.9rem;
-  --bs-tooltip-padding-y: 0.5rem;
+  --bs-tooltip-padding-x: 0.5rem;
+  --bs-tooltip-padding-y: 0.25rem;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.9rem;
   --bs-tooltip-color: var(--bs-body-bg);
   --bs-tooltip-bg: #495057;
-  --bs-tooltip-border-radius: var(--bs-border-radius-xl);
-  --bs-tooltip-opacity: 1;
+  --bs-tooltip-border-radius: var(--bs-border-radius);
+  --bs-tooltip-opacity: 0.9;
   --bs-tooltip-arrow-width: 0.8rem;
   --bs-tooltip-arrow-height: 0.4rem;
   z-index: var(--bs-tooltip-zindex);
@@ -6208,7 +6208,7 @@ textarea.form-control-lg {
   position: absolute !important;
 }
 
-.position-fixed {
+.position-fixed, .ajaxLoading {
   position: fixed !important;
 }
 
@@ -6784,7 +6784,7 @@ textarea.form-control-lg {
   margin-top: 0.5rem !important;
 }
 
-.mt-3 {
+.mt-3, .ajaxLoading {
   margin-top: 1rem !important;
 }
 
@@ -10818,7 +10818,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.d-none {
+.dn {
   display: none;
 }
 
@@ -11237,6 +11237,41 @@ textarea.form-control-lg {
   color: #dc3545;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+/*ajaxLoading*/
+.ajaxLoading {
+  left: 50%;
+  z-index: 1080;
+}
+.ajaxLoading > div {
+  position: relative;
+  left: -50%;
+  padding: 0.4rem 2.5rem 0.4rem 0.3rem;
+  color: #fff;
+  background-color: #343a40;
+  border-radius: 50rem;
+}
+.ajaxLoading > div > i {
+  color: #ffe69c;
+  margin-right: 1rem;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #c0c0c1;
+  border-radius: 10px;
+}
+.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+.overflow-auto::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 
 /*!

@@ -10,6 +10,11 @@
 </head>
 <body>
 
+<!--loding-->
+<div id="ajaxLoading" class="ajaxLoading">
+    <div><i class="fa fa-circle-notch fa-spin fa-xl"></i> Loading</div>
+</div>
+
 <!--modal-->
 <div class="modal" tabindex="-1" data-bs-backdrop="static" id="otm-modal">
     <div class="modal-dialog modal-dialog-centered">
@@ -43,13 +48,13 @@
     <!--nav-->
     <div class="ps-2 px-md-2 px-lg-3 px-xl-5">
 
-        <div class="row justify-content-between align-items-center position-relative otm-nav">
+        <div class="row align-items-center position-relative otm-nav">
 
-            <div class="col-3 text-nowrap otm-brand">
+            <div class="col-auto text-nowrap otm-brand">
                 <a href="#"><i class="far fa-life-ring"></i>tm</a>
             </div>
 
-            <div class="col-6">
+            <div class="col-auto px-0 ms-auto">
                 <ul class="nav justify-content-center d-none d-lg-flex" id="otm-menu">
                     <li class="nav-item active">
                         <a class="nav-link" aria-current="page" href="#">ARAŞTIRMA</a>
@@ -66,7 +71,7 @@
                 </ul>
             </div>
 
-            <div class="col-3 d-none d-lg-flex justify-content-end">
+            <div class="col-auto d-none px-0 d-lg-flex justify-content-end">
                 <ul class="nav nav-user align-self-stretch ms-auto flex-nowrap">
                     <li class="nav-item dropdown">
                         <a href="#" class="align-items-center d-flex dropdown-toggle h-100 nav-link position-relative py-0" role="button" data-bs-toggle="dropdown">

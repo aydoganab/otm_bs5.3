@@ -85,13 +85,13 @@ $dropdown-link-active-color: $black;
 $btn-active-bg-shade-amount: 30%;
 
 //tooltip
-$tooltip-opacity: 1;
+//$tooltip-opacity: 1;
 $tooltip-font-size: .9rem;
 //oltip-bg: shade-color($secondary, 30%);
 $tooltip-bg: $gray-700;
-$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
-$tooltip-padding-y: $spacer * .5;
-$tooltip-padding-x: $spacer * .9;
+//$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
+//$tooltip-padding-y: $spacer * .5;
+//$tooltip-padding-x: $spacer * .9;
 //$tooltip-arrow-width: 0;
 //$tooltip-arrow-height: 0;
 
@@ -147,7 +147,7 @@ $toast-max-width: auto;
 
 // 8. Add additional custom code here
 
-.d-none{
+.dn{
   display: none;
 }
 
@@ -416,6 +416,48 @@ $icon-button-colors: (
   font-weight: 500;
 }
 
+/*ajaxLoading*/
+$ajax-loading-bg:$gray-800;
+.ajaxLoading {
+  @extend .position-fixed;
+  @extend .mt-3;
+  left: 50%;
+  z-index: 1080;
+  >div{
+    position: relative;
+    left: -50%;
+    padding: $spacer*.4 $spacer*2.5 $spacer*.4 $spacer*.3;
+    color: color-contrast($ajax-loading-bg);
+    background-color: $ajax-loading-bg;
+    border-radius: $border-radius-pill;
+    //box-shadow: inset -2px -2px 6px tint-color($ajax-loading-bg, 20%);
+    >i{
+      color: $yellow-200;
+      margin-right: $spacer;
+    }
+  }
+}
+
+//overflow scroll
+.overflow-auto{
+  @extend .overflow-auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c1;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background: #888888;
+  }
+  &::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+  }
+}
 
 //9. FA
 $fa-font-path: "../fonts";
