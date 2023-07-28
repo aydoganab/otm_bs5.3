@@ -217,27 +217,34 @@
                 </div>
 
 
-                <div class="row justify-content-center mt-4">
-                    <div class="col-4">
-                        <form id="form-psw">
-                            <div class="mb-3">
-                                <label class="form-label" for="oldp">Current password</label>
-                                <input name="oldp" type="password" class="form-control" id="oldp" required="" autocomplete="off">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="oldp">New password</label>
-                                <input name="newp" type="password" class="form-control" id="newp" required="" autocomplete="off">
-                            </div>
-                            <div class="mb-4">
-                                <label class="form-label" for="oldp">Type new password again</label>
-                                <input name="newp2" type="password" class="form-control" id="newp2" required="" autocomplete="off">
-                            </div>
-                            <div class="text-center" id="pccon">
-                                <button type="submit" name="change_password" class="btn btn-primary rounded-pill dis" id="change_password"><i class="fa fa-key"></i> Change my password</button>
-                            </div>
-                            <input type="hidden" name="asp" value="genel-2-0">
-                        </form>
-                    </div>
+                <div class="d-flex justify-content-center mt-5">
+                    
+                    <form action="">
+                        <div class="dropdown-center position-relative">
+                            <div class="position-absolute w-100 h-100" data-bs-toggle="dropdown"></div>
+                            <select name="solvent" id="solvent" class="form-select otm-select" title="Solvent" required="">
+                            <option value="" selected="selected">Select</option>
+                            <option value="CDCl3">CDCl3</option>
+                            <option value="CD2Cl2">CD2Cl2</option>
+                            <option value="CS2">Carbon Disulphide</option>
+                            <option value="dDMSO">d-DMSO</option>
+                            <option value="dDMF">d-DMF</option>
+                            <option value="D2O">D2O</option>
+                            <option value="dacetone">d-Acetone</option>
+                            <option value="dAceticacid">d-Acetic Acid</option>
+                            <option value="dacetonirtile">CD3CN</option>
+                            <option value="dTHF">d-THF</option>
+                            <option value="dEthanol">d-Ethanol</option>
+                            <option value="dMethanol">d-Methanol</option>
+                            <option value="dBenzene">d-Benzene</option>
+                            <option value="dTFA">d-TFA</option>
+                            <option value="dPyridine">d-Pyridine</option>
+                            <option value="CCl4">Carbon Tetrachloride</option>
+                            <option value="dToluene">d-Toluene</option>
+                        </select>
+                        </div>
+                    </form>
+                    
                 </div>
 
 
@@ -260,10 +267,17 @@
         $('#otm-menu').clone().removeAttr('class').addClass('nav flex-column').append('<li class="nav-item"><a href="#" class="nav-link">Log out</a></li>').appendTo('.offcanvas-body');
         $('#otm-offcanvas').addClass('offcanvas-end').offcanvas('show');
     });
-
-    $('#otm-offcanvas').on('hidden.bs.offcanvas', function () {
-        $(this).find('')
+    
+    
+    $('.otm-select').parent().append('<ul class="dropdown-menu border-secondary overflow-auto" style="max-height: 250px"></ul>').click(function () {
+        let ddm = $(this).find('.dropdown-menu');
+        if (ddm.find('li').length == 0) {
+            $('.otm-select option').each(function () {
+                ddm.append('<li><button type="button" class="dropdown-item">' + $(this).text() + '</button></li>');
+            });
+        }
     });
+    
 </script>
 
 </body>
