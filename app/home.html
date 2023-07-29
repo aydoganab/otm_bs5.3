@@ -220,9 +220,8 @@
                 <div class="d-flex justify-content-center mt-5">
                     
                     <form action="">
-                        <div class="dropdown-center position-relative">
-                            <div class="position-absolute w-100 h-100" data-bs-toggle="dropdown"></div>
-                            <select name="solvent" id="solvent" class="form-select otm-select" title="Solvent" required="">
+                        <div class="inpt"></div>
+                        <select name="solvent" id="solvent" class="form-select otm-select" title="Solvent" required="">
                             <option value="" selected="selected">Select</option>
                             <option value="CDCl3">CDCl3</option>
                             <option value="CD2Cl2">CD2Cl2</option>
@@ -242,7 +241,6 @@
                             <option value="CCl4">Carbon Tetrachloride</option>
                             <option value="dToluene">d-Toluene</option>
                         </select>
-                        </div>
                     </form>
                     
                 </div>
@@ -268,15 +266,24 @@
         $('#otm-offcanvas').addClass('offcanvas-end').offcanvas('show');
     });
     
+    $('.otm-select').each(function (i, e) {
+        $(this).wrap('<div class="dropdown-center position-relative"></div>');
+        $(this).before('<div class="position-absolute w-100 h-100" data-bs-toggle="dropdown"></div>');
+        let ddm = $('<ul class="dropdown-menu border-secondary overflow-auto" style="max-height: 250px"></ul>');
+        $(this).find('option').each(function () {
+            ddm.append('<li><button type="button" class="dropdown-item">' + $(this).text() + '</button></li>');
+        });
+        $(this).after(ddm);
+    });
     
-    $('.otm-select').parent().append('<ul class="dropdown-menu border-secondary overflow-auto" style="max-height: 250px"></ul>').click(function () {
+    /*$('.otm-select').parent().append('<ul class="dropdown-menu border-secondary overflow-auto" style="max-height: 250px"></ul>').click(function () {
         let ddm = $(this).find('.dropdown-menu');
         if (ddm.find('li').length == 0) {
             $('.otm-select option').each(function () {
                 ddm.append('<li><button type="button" class="dropdown-item">' + $(this).text() + '</button></li>');
             });
         }
-    });
+    });*/
     
 </script>
 
