@@ -11296,6 +11296,38 @@ textarea.form-control-lg {
   box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 
+.tooltip-primary {
+  --bs-tooltip-bg: #0d6efd;
+}
+
+.tooltip-secondary {
+  --bs-tooltip-bg: #6c757d;
+}
+
+.tooltip-success {
+  --bs-tooltip-bg: #198754;
+}
+
+.tooltip-info {
+  --bs-tooltip-bg: #0dcaf0;
+}
+
+.tooltip-warning {
+  --bs-tooltip-bg: #ffc107;
+}
+
+.tooltip-danger {
+  --bs-tooltip-bg: #dc3545;
+}
+
+.tooltip-light {
+  --bs-tooltip-bg: #f8f9fa;
+}
+
+.tooltip-dark {
+  --bs-tooltip-bg: #212529;
+}
+
 /*!
  * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

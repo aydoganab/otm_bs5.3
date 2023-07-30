@@ -456,6 +456,13 @@ $ajax-loading-bg:$gray-800;
   }
 }
 
+//colorful tooltips
+@each $color, $value in $theme-colors {
+  .tooltip-#{$color} {
+    --#{$prefix}tooltip-bg: #{$value};
+  }
+}
+
 //9. FA
 $fa-font-path: "../fonts";
 $fa-font-size-base: 1rem;
