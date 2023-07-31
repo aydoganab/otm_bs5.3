@@ -219,36 +219,10 @@
 
                 <div class="d-flex justify-content-center mt-5">
 
-                    <form action="">
-                        <div class="input-group input-group-sm">
-                            <select name="deneme" class="form-select otm-select">
-                               <option value="1">Adana</option>
-                               <option value="2">Ankara</option>
-                            </select>
-                            <select name="solvent" id="solvent" class="form-select otm-select" title="Solvent" required="">
-                                <option value="" selected="selected">Select</option>
-                                <option value="CDCl3">CDCl3</option>
-                                <option value="CD2Cl2">CD2Cl2</option>
-                                <option value="CS2">Carbon Disulphide</option>
-                                <option value="dDMSO">d-DMSO</option>
-                                <option value="dDMF">d-DMF</option>
-                                <option value="D2O">D2O</option>
-                                <option value="dacetone">d-Acetone</option>
-                                <option value="dAceticacid">d-Acetic Acid</option>
-                                <option value="dacetonirtile">CD3CN</option>
-                                <option value="dTHF">d-THF</option>
-                                <option value="dEthanol">d-Ethanol</option>
-                                <option value="dMethanol">d-Methanol</option>
-                                <option value="dBenzene">d-Benzene</option>
-                                <option value="dTFA">d-TFA</option>
-                                <option value="dPyridine">d-Pyridine</option>
-                                <option value="CCl4">Carbon Tetrachloride</option>
-                                <option value="dToluene">d-Toluene</option>
-                            </select>
-                            <button type="button" class="btn btn-primary">Save</button>
-                        </div>
-
-                    </form>
+                    <button type="button" class="btn-icon btn-icon-dark">
+                        <i class="fa fa-comment-alt"></i>
+                        <span class="counter bg-primary">14</span>
+                    </button>
 
                 </div>
 
@@ -273,27 +247,6 @@
         $('#otm-offcanvas').addClass('offcanvas-end').offcanvas('show');
     });
 
-    $(function () {
-        $('.otm-select').each(function (i, e) {
-            $(this).on('mousedown', function (e) {
-                e.preventDefault();
-            }).click(function () {
-                $(this).focus();
-            }).attr('data-bs-toggle','dropdown');
-
-            let ddm = $('<ul class="dropdown-menu dropdown-menu-otm overflow-auto" style="max-height: 250px"></ul>');
-            $(this).find('option').each(function () {
-                ddm.append('<li><button type="button" class="dropdown-item" data-value="'+this.value+'">' + this.text + '</button></li>');
-            });
-            $(this).after(ddm);
-        });
-
-        $('.dropdown-menu-otm').each(function (i, e) {
-            $(this).find('button').click(function () {
-                $('.otm-select.show').val($(this).attr('data-value'));
-            });
-        });
-    });
 
 </script>
 

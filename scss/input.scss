@@ -28,6 +28,8 @@ $font-size-root: 14px;
 
 $font-size-base: 1rem;
 
+$small-font-size: .75rem;
+
 $h1-font-size: $font-size-base * 1.5;
 $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.75;
@@ -92,8 +94,8 @@ $tooltip-bg: $gray-800;
 //$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
 //$tooltip-padding-y: $spacer * .5;
 //$tooltip-padding-x: $spacer * .9;
-//$tooltip-arrow-width: 0;
-//$tooltip-arrow-height: 0;
+//tooltip-arrow-width: 2px;
+//$tooltip-arrow-height: 5px;
 
 //modal
 $modal-header-padding-y: .5rem;
@@ -153,7 +155,11 @@ $toast-max-width: auto;
 }
 
 .fs-medium {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
+}
+
+.small{
+  font-size: $small-font-size;
 }
 
 .cursor-pointer {
@@ -175,7 +181,8 @@ $toast-max-width: auto;
 //modal
 .modal-header {
   @extend .modal-header;
-  background-color: tint-color($primary-bg-subtle, 60%);
+  //background-color: tint-color($primary-bg-subtle, 60%);
+  background-color: $white;
 }
 
 /*navbar*/
@@ -458,9 +465,41 @@ $ajax-loading-bg:$gray-800;
 
 //colorful tooltips
 @each $color, $value in $theme-colors {
+  $tt-bg-color:shade-color($value, 10%);
   .tooltip-#{$color} {
-    --#{$prefix}tooltip-bg: #{$value};
+    --#{$prefix}tooltip-bg: #{$tt-bg-color};
   }
+}
+
+//otm nav pills
+.otm-nav-pills{
+  --#{$prefix}nav-link-color: #{$gray-600};
+  --#{$prefix}nav-link-hover-color:  #{tint-color($primary, 5%)};
+  --#{$prefix}nav-link-padding-x:  1.144286rem;
+  font-weight: 500;
+  gap: .55rem;
+  .nav-link:not(.active):hover{
+    background-color: tint-color($primary, 95%);
+  }
+  .nav-link.active{
+    --#{$prefix}nav-pills-link-active-bg: #{tint-color($primary, 90%)};
+    --#{$prefix}nav-pills-link-active-color: #{$primary};
+    font-weight: 600;
+  }
+}
+
+//counter spans
+.counter {
+  position: absolute;
+  left: 90%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  padding: 2px 3px;
+  font-size: .65rem;
+  font-weight: 700;
+  border-radius: $border-radius-sm;
+  color: $white;
+  line-height: 1;
 }
 
 //9. FA
