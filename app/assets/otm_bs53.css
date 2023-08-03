@@ -6711,7 +6711,7 @@ textarea.form-control-lg {
   position: absolute !important;
 }
 
-.position-fixed, .ajaxLoading {
+.position-fixed {
   position: fixed !important;
 }
 
@@ -7287,7 +7287,7 @@ textarea.form-control-lg {
   margin-top: 0.5rem !important;
 }
 
-.mt-3, .ajaxLoading {
+.mt-3 {
   margin-top: 1rem !important;
 }
 
@@ -11745,10 +11745,12 @@ textarea.form-control-lg {
 
 /*ajaxLoading*/
 .ajaxLoading {
+  position: fixed;
+  margin-top: 2rem;
   left: 50%;
   z-index: 1080;
 }
-.ajaxLoading > div {
+.ajaxLoading > .indicator {
   position: relative;
   left: -50%;
   padding: 0.4rem 2.5rem 0.4rem 0.3rem;
@@ -11756,9 +11758,18 @@ textarea.form-control-lg {
   background-color: #343a40;
   border-radius: 50rem;
 }
-.ajaxLoading > div > i {
-  color: #ffe69c;
+.ajaxLoading > .indicator > i {
+  color: #ffda6a;
   margin-right: 1rem;
+}
+.ajaxLoading > .progress {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 60% !important;
+  height: 2px;
+  bottom: 3px;
+  --bs-progress-bg: #6c757d;
+  --bs-progress-bar-bg: #ffda6a;
 }
 
 .overflow-auto::-webkit-scrollbar {

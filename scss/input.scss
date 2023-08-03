@@ -429,11 +429,11 @@ $icon-button-colors: (
 /*ajaxLoading*/
 $ajax-loading-bg:$gray-800;
 .ajaxLoading {
-  @extend .position-fixed;
-  @extend .mt-3;
+  position: fixed;
+  margin-top: 2rem;
   left: 50%;
   z-index: 1080;
-  >div{
+  >.indicator{
     position: relative;
     left: -50%;
     padding: $spacer*.4 $spacer*2.5 $spacer*.4 $spacer*.3;
@@ -442,9 +442,18 @@ $ajax-loading-bg:$gray-800;
     border-radius: $border-radius-pill;
     //box-shadow: inset -2px -2px 6px tint-color($ajax-loading-bg, 20%);
     >i{
-      color: $yellow-200;
+      color: $yellow-300;
       margin-right: $spacer;
     }
+  }
+  >.progress{
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60% !important;
+    height: 2px;
+    bottom: 3px;
+    --#{$prefix}progress-bg: #{$gray-600};
+    --#{$prefix}progress-bar-bg: #{$yellow-300};
   }
 }
 
