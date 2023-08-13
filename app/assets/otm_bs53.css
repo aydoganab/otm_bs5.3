@@ -11396,7 +11396,7 @@ textarea.form-control-lg {
 
 @media (min-width: 768px) {
   .btn.rounded-pill, .rounded-pill.btn-icon, .rounded-pill.btn-icon-sm {
-    --bs-btn-padding-x: 0.975rem;
+    --bs-btn-padding-x: 0.825rem;
   }
 }
 .btn-outline-primary {
