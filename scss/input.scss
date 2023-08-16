@@ -90,7 +90,7 @@ $btn-active-bg-shade-amount: 30%;
 
 //tooltip
 //$tooltip-opacity: 1;
-$tooltip-font-size: $font-size-base*.95;
+$tooltip-font-size: $font-size-base*.9;
 //oltip-bg: shade-color($secondary, 30%);
 $tooltip-bg: $gray-800;
 //$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
@@ -282,7 +282,8 @@ $icon-button-colors: (
         "primary":    $primary,
         "success":    $success,
         "danger":     $danger,
-        "dark":       $dark
+        "dark":       $dark,
+        "secondary":  $secondary
 );
 
 @each $color-bi, $value in $icon-button-colors{
