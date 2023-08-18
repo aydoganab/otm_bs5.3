@@ -103,6 +103,10 @@ $tooltip-bg: $gray-800;
 //modal
 $modal-header-padding-y: .5rem;
 $modal-header-border-width: 0;
+$modal-transition: transform .2s ease-out;
+$modal-fade-transform: scale(.95);
+$modal-backdrop-opacity: .4;
+
 
 //toast
 $toast-font-size: 1rem;
