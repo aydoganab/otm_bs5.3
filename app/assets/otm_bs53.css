@@ -5462,8 +5462,8 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
-  transition: transform 0.2s ease-out;
-  transform: scale(0.95);
+  transition: transform 0.25s ease-out;
+  transform: scale(0.9);
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
