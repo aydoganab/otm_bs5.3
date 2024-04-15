@@ -6002,7 +6002,7 @@ textarea.form-control-lg {
 .toast {
   --bs-toast-zindex: 1090;
   --bs-toast-padding-x: 0.75rem;
-  --bs-toast-padding-y: 0.5rem;
+  --bs-toast-padding-y: 0.357rem;
   --bs-toast-spacing: 1.5rem;
   --bs-toast-max-width: auto;
   --bs-toast-font-size: 1rem;
@@ -12104,6 +12104,10 @@ textarea.form-control-lg {
 
 .small {
   font-size: 0.75rem;
+}
+
+.badge {
+  line-height: 1.1;
 }
 
 .cursor-pointer {

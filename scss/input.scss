@@ -111,6 +111,7 @@ $modal-backdrop-opacity: .4;
 //toast
 $toast-font-size: 1rem;
 $toast-max-width: auto;
+$toast-padding-y: .357rem;
 
   // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 
@@ -170,6 +171,10 @@ $toast-max-width: auto;
 
 .small{
   font-size: $small-font-size;
+}
+
+.badge{
+  line-height: 1.1;
 }
 
 .cursor-pointer {
