@@ -196,6 +196,7 @@ $toast-padding-y: .357rem;
 //modal
 .modal-header {
   @extend .modal-header;
+  justify-content: space-between;
   //background-color: tint-color($primary-bg-subtle, 60%);
   background-color: $light;
 }

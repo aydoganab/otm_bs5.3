@@ -12127,6 +12127,7 @@ textarea.form-control-lg {
 }
 
 .modal-header {
+  justify-content: space-between;
   background-color: #f8f9fa;
 }
 
