@@ -38,7 +38,7 @@ gulp.task('js', function () {
 //FA
 gulp.task('fa', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/!(*brands*)')
-        .pipe(gulp.dest("app/fonts"))
+        .pipe(gulp.dest("app/webfonts"))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -57,7 +57,7 @@ gulp.task('move_js', function () {
 
 gulp.task('move_fonts', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/!(*brands*)')
-        .pipe(gulp.dest('../xampp/htdocs/otmnew/o/fonts'))
+        .pipe(gulp.dest('../xampp/htdocs/otmnew/o/webfonts'))
 });
 
 gulp.task('move-assets', gulp.series('move_css','move_js','move_fonts'));
