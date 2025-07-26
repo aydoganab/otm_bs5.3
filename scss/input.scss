@@ -376,17 +376,19 @@ $icon-button-colors: (
 //reduced buttons
 @each $color-rd, $value in $icon-button-colors{
   $background: transparent;
-  //$border: tint-color($value, 50%);
-  $border: $gray-400;
+  $border: tint-color($value, 65%);
+  //$border: $gray-400;
   $color: $value;
   $hover-color: shade-color($value, 15%);
   $hover-background: tint-color($value, 95%);
-  $hover-border:$border;
+  $hover-border:shift-color($border, 10%);
+  //$hover-border:$border;
   $active-color: shade-color($value, 30%);
   //$active-color: color-contrast($hover-background);
   $active-background: tint-color($value, 85%);
   //$active-border: $border;
-  $active-border: shift-color($active-background, 20%);
+  //$active-border: shift-color($active-background, 20%);
+  $active-border: $hover-border;
   $disabled-color: tint-color($value, 10%);
   $disabled-background: $background;
   $disabled-border: $border;
