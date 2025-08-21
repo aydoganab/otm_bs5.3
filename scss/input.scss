@@ -26,7 +26,12 @@ $component-active-bg: $primary;
 
 $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-$font-size-root: 14px;
+$otm-font-size-root: 14;
+:root {
+  --otm-font-size-root: #{$otm-font-size-root};
+}
+$font-size-root: $otm-font-size-root + 'px';
+
 
 $font-size-base: 1rem;
 
@@ -548,4 +553,16 @@ $fa-font-size-base: 1rem;
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
-//@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+/*
+@use "../node_modules/@fortawesome/fontawesome-free/scss/variables" with (
+  $fa-font-path: "../fonts",
+  $fa-font-size-base: 1rem,
+  $fa-fw-width: calc(20em / 16)
+);
+
+@use "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@use "../node_modules/@fortawesome/fontawesome-free/scss/regular" as fa-regular;
+@use "../node_modules/@fortawesome/fontawesome-free/scss/solid" as fa-solid;
+*/
