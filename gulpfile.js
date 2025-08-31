@@ -10,7 +10,11 @@ let browserSync = require('browser-sync').create();
 //SASS
 gulp.task('sass', function () {
     return gulp.src('./scss/input.scss')
-        .pipe(sass())
+        .pipe(sass({
+            silenceDeprecations: ['legacy-js-api', 'mixed-decls', 'color-functions', 'global-builtin', 'import'],
+            indentType: 'space',
+            indentWidth: 2,
+        }))
         .pipe(autoprefixer({browserlist: [">= 1%", "last 2 major version", "not dead", "Chrome >= 60", "Firefox >= 60", "Edge >= 60", "iOS >= 12", "Safari >= 12", "Android >= 8", "not Explorer <= 11"]}))
         .pipe(rename('otm_bs53.css'))
         .pipe(gulp.dest('app/assets'))
