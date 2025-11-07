@@ -100,15 +100,15 @@ $dropdown-link-active-color: $black;
 $btn-active-bg-shade-amount: 30%;
 
 //tooltip
-//$tooltip-opacity: 1;
+$tooltip-opacity: .9;
 $tooltip-font-size: $font-size-base*.9;
 //oltip-bg: shade-color($secondary, 30%);
 $tooltip-bg: $gray-800;
-//$tooltip-border-radius: var(--#{$prefix}border-radius-xl);
+$tooltip-border-radius: var(--#{$prefix}border-radius-lg);
 //$tooltip-padding-y: $spacer * .5;
-//$tooltip-padding-x: $spacer * .9;
-//tooltip-arrow-width: 2px;
-//$tooltip-arrow-height: 5px;
+$tooltip-padding-x: $spacer * .8;
+$tooltip-arrow-width: 0;
+$tooltip-arrow-height: 0;
 
 //modal
 $modal-header-padding-y: .5rem;
