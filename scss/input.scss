@@ -309,7 +309,7 @@ $icon-button-colors: (
         "success":    $success,
         "danger":     $danger,
         "dark":       $dark,
-        "secondary":  $secondary
+        "secondary":  $secondary,
 );
 
 @each $color-bi, $value in $icon-button-colors{
