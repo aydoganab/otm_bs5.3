@@ -104,7 +104,7 @@
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #ced4da;
+  --bs-border-color: #adb5bd;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -13568,6 +13568,10 @@ textarea.form-control-lg {
   --fa: "\e131";
 }
 
+.fa-closed-captioning-slash {
+  --fa: "\e135";
+}
+
 .fa-clover {
   --fa: "\e139";
 }
@@ -14848,6 +14852,10 @@ textarea.form-control-lg {
   --fa: "\e80a";
 }
 
+.fa-picture-in-picture {
+  --fa: "\e80b";
+}
+
 .fa-mobile-vibrate {
   --fa: "\e816";
 }
@@ -14870,6 +14878,54 @@ textarea.form-control-lg {
 
 .fa-heptagon {
   --fa: "\e820";
+}
+
+.fa-aquarius {
+  --fa: "\e845";
+}
+
+.fa-aries {
+  --fa: "\e846";
+}
+
+.fa-cancer {
+  --fa: "\e847";
+}
+
+.fa-capricorn {
+  --fa: "\e848";
+}
+
+.fa-gemini {
+  --fa: "\e849";
+}
+
+.fa-leo {
+  --fa: "\e84a";
+}
+
+.fa-libra {
+  --fa: "\e84b";
+}
+
+.fa-pisces {
+  --fa: "\e84c";
+}
+
+.fa-sagittarius {
+  --fa: "\e84d";
+}
+
+.fa-scorpio {
+  --fa: "\e84e";
+}
+
+.fa-taurus {
+  --fa: "\e84f";
+}
+
+.fa-virgo {
+  --fa: "\e850";
 }
 
 .fa-martini-glass-empty {
@@ -20172,6 +20228,14 @@ textarea.form-control-lg {
   --fa: "\f6a7";
 }
 
+.fa-volume {
+  --fa: "\f6a8";
+}
+
+.fa-volume-medium {
+  --fa: "\f6a8";
+}
+
 .fa-volume-xmark {
   --fa: "\f6a9";
 }
@@ -21065,9 +21129,9 @@ textarea.form-control-lg {
 }
 
 /*!
- * Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2025 Fonticons, Inc.
+ * Copyright 2026 Fonticons, Inc.
  */
 :root, :host {
   --fa-family-classic: 'Font Awesome 7 Free';
@@ -21097,9 +21161,9 @@ textarea.form-control-lg {
 }
 
 /*!
- * Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2025 Fonticons, Inc.
+ * Copyright 2026 Fonticons, Inc.
  */
 :root, :host {
   --fa-family-classic: 'Font Awesome 7 Free';
