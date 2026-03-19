@@ -11,7 +11,7 @@
 @import "colors";
 
 // 2. Include any default variable overrides here
-$enable-dark-mode: false;
+$enable-dark-mode: true;
 $enable-transitions: true;
 $enable-gradients: false;
 $enable-shadows: false;
@@ -93,11 +93,11 @@ $input-placeholder-color: var(--#{$prefix}gray-500);
 $breadcrumb-margin-bottom: 0;
 
 //dropdowns
-$dropdown-border-color: $gray-400;
+//$dropdown-border-color: var(--#{$prefix}border-color);
 $dropdown-item-padding-y: .5rem;
-$dropdown-link-hover-bg: $gray-200;
-$dropdown-link-active-bg: $gray-300;
-$dropdown-link-active-color: $black;
+//$dropdown-link-hover-bg: var(--#{$prefix}gray-200);
+//$dropdown-link-active-bg: var(--#{$prefix}garay-300);
+$dropdown-link-active-color: var(--#{$prefix}body-color);
 
 //buttons
 $btn-active-bg-shade-amount: 30%;
@@ -211,7 +211,8 @@ $toast-padding-y: .357rem;
   @extend .modal-header;
   justify-content: space-between;
   //background-color: tint-color($primary-bg-subtle, 60%);
-  background-color: $light;
+  //background-color: $light;
+  background-color: var(--bs-light-bg-subtle);
 }
 
 .modal-content{
@@ -231,8 +232,8 @@ $toast-padding-y: .357rem;
     --#{$prefix}nav-link-font-weight: 500;
     --#{$prefix}nav-link-padding-x: 2rem;
     --#{$prefix}nav-link-padding-y: 1.2rem;
-    --#{$prefix}nav-link-color: #{$body-color};
-    --#{$prefix}nav-link-hover-color: #{$body-color};
+    --#{$prefix}nav-link-color: var(--#{$prefix}body-color);
+    --#{$prefix}nav-link-hover-color: var(--#{$prefix}body-color);
 
     @include media-breakpoint-down(lg) {
       --#{$prefix}nav-link-padding-x: 1rem;
@@ -244,15 +245,15 @@ $toast-padding-y: .357rem;
 
     .nav-item {
       &:hover {
-        background-color: $gray-100;
+        background-color: var(--#{$prefix}tertiary-bg);
       }
 
       &:active, &.show, .nav-link.show {
-        background-color: shift-color($gray-100, 3%);
+        background-color: var(--#{$prefix}secondary-bg);
       }
 
       &.active {
-        background-color: shift-color($gray-100, 5%);
+        background-color: var(--#{$prefix}secondary-bg);
       }
     }
   }
