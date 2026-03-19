@@ -92,6 +92,9 @@ $input-placeholder-color: var(--#{$prefix}gray-500);
 
 $breadcrumb-margin-bottom: 0;
 
+// cards
+$card-cap-color: var(--#{$prefix}secondary-text-emphasis);
+
 //dropdowns
 //$dropdown-border-color: var(--#{$prefix}border-color);
 $dropdown-item-padding-y: .5rem;
@@ -308,7 +311,7 @@ $toast-padding-y: .357rem;
   height: 1.908rem !important;
 }
 
-$icon-button-colors: (
+$otm-button-colors: (
         "primary":    $primary,
         "success":    $success,
         "danger":     $danger,
@@ -316,7 +319,7 @@ $icon-button-colors: (
         "secondary":  $secondary,
 );
 
-@each $color-bi, $value in $icon-button-colors{
+@each $color-bi, $value in $otm-button-colors{
   $background: transparent;
   $border: transparent;
   $color: $value;
@@ -349,41 +352,46 @@ $icon-button-colors: (
 }
 
 //flat buttons
-@each $color-fl, $value in $icon-button-colors{
+@each $color-fl, $value in $otm-button-colors{
+
   $background: transparent;
   $border: transparent;
   $color: $value;
-  $hover-color: shade-color($value, 10%);
-  $hover-background: tint-color($value, 90%);
+  $hover-color: shade-color($color, 10%);
+  $hover-background: tint-color($color, 90%);
   $hover-border: $hover-background;
-  $active-color: shade-color($value, 20%);
+  $active-color: shade-color($color, 20%);
   //$active-color: color-contrast($hover-background);
-  $active-background: tint-color($value, 80%);
+  $active-background: tint-color($color, 80%);
   $active-border: $background;
-  $disabled-color: tint-color($value, 10%);
+  $disabled-color: tint-color($color, 10%);
   $disabled-background: $background;
   $disabled-border: $border;
-  .btn-flat-#{$color-fl}{
-    --#{$prefix}btn-font-weight: 500;
-    --#{$prefix}btn-color: #{$color};
-    --#{$prefix}btn-bg: #{$background};
-    --#{$prefix}btn-border-color: #{$border};
-    --#{$prefix}btn-hover-color: #{$hover-color};
-    --#{$prefix}btn-hover-bg: #{$hover-background};
-    --#{$prefix}btn-hover-border-color: #{$hover-border};
-    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
-    --#{$prefix}btn-active-color: #{$active-color};
-    --#{$prefix}btn-active-bg: #{$active-background};
-    --#{$prefix}btn-active-border-color: #{$active-border};
-    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-    --#{$prefix}btn-disabled-color: #{$disabled-color};
-    --#{$prefix}btn-disabled-bg: #{$disabled-background};
-    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+
+  $color-mode-type: data;
+  @include color-mode(light) {
+    .btn-flat-#{$color-fl} {
+      --#{$prefix}btn-font-weight: #{$font-weight-medium};
+      --#{$prefix}btn-color: #{$color};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border};
+      --#{$prefix}btn-hover-color: #{$hover-color};
+      --#{$prefix}btn-hover-bg: #{$hover-background};
+      --#{$prefix}btn-hover-border-color: #{$hover-border};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color};
+      --#{$prefix}btn-active-bg: #{$active-background};
+      --#{$prefix}btn-active-border-color: #{$active-border};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+    }
   }
 }
 
 //reduced buttons
-@each $color-rd, $value in $icon-button-colors{
+@each $color-rd, $value in $otm-button-colors{
   $background: transparent;
   $border: tint-color($value, 65%);
   //$border: $gray-400;

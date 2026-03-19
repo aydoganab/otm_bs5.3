@@ -3216,7 +3216,7 @@ textarea.form-control-lg {
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
-  --bs-card-cap-color: ;
+  --bs-card-cap-color: var(--bs-secondary-text-emphasis);
   --bs-card-height: ;
   --bs-card-color: ;
   --bs-card-bg: var(--bs-body-bg);
@@ -12424,7 +12424,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
 }
 
-.btn-flat-primary {
+[data-bs-theme=light] .btn-flat-primary {
   --bs-btn-font-weight: 500;
   --bs-btn-color: #0d6efd;
   --bs-btn-bg: transparent;
@@ -12442,7 +12442,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
 }
 
-.btn-flat-success {
+[data-bs-theme=light] .btn-flat-success {
   --bs-btn-font-weight: 500;
   --bs-btn-color: #198754;
   --bs-btn-bg: transparent;
@@ -12460,7 +12460,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
 }
 
-.btn-flat-danger {
+[data-bs-theme=light] .btn-flat-danger {
   --bs-btn-font-weight: 500;
   --bs-btn-color: #dc3545;
   --bs-btn-bg: transparent;
@@ -12478,7 +12478,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
 }
 
-.btn-flat-dark {
+[data-bs-theme=light] .btn-flat-dark {
   --bs-btn-font-weight: 500;
   --bs-btn-color: #212529;
   --bs-btn-bg: transparent;
@@ -12496,7 +12496,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
 }
 
-.btn-flat-secondary {
+[data-bs-theme=light] .btn-flat-secondary {
   --bs-btn-font-weight: 500;
   --bs-btn-color: #6c757d;
   --bs-btn-bg: transparent;
