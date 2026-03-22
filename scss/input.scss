@@ -377,11 +377,38 @@ $otm-button-colors: (
       --#{$prefix}btn-border-color: #{$border};
       --#{$prefix}btn-hover-color: #{$hover-color};
       --#{$prefix}btn-hover-bg: #{$hover-background};
-      --#{$prefix}btn-hover-border-color: #{$hover-border};
+      --#{$prefix}btn-hover-border-color: #{$hover-background};
       --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
       --#{$prefix}btn-active-color: #{$active-color};
       --#{$prefix}btn-active-bg: #{$active-background};
       --#{$prefix}btn-active-border-color: #{$active-border};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+    }
+  }
+
+  $color-dark:if($color-fl != "dark", tint-color($color, 10%), $gray-400);
+  $hover-background-dark: if($color-fl != "dark", shade-color($color-dark, 30%), $gray-300);
+  $hover-color-dark: color-contrast($hover-background-dark);
+  $hover-border-dark: $hover-background-dark;
+  $active-background-dark: shade-color($color-dark, 20%);
+  $active-color-dark: color-contrast($active-background-dark);
+  $active-border-dark: $active-background-dark;
+  @include color-mode(dark) {
+    .btn-flat-#{$color-fl} {
+      --#{$prefix}btn-font-weight: #{$font-weight-medium};
+      --#{$prefix}btn-color: #{$color-dark};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border};
+      --#{$prefix}btn-hover-color: #{$hover-color-dark};
+      --#{$prefix}btn-hover-bg: #{$hover-background-dark};
+      --#{$prefix}btn-hover-border-color: #{$hover-border-dark};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color-dark, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color-dark};
+      --#{$prefix}btn-active-bg: #{$active-background-dark};
+      --#{$prefix}btn-active-border-color: #{$active-border-dark};
       --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
       --#{$prefix}btn-disabled-color: #{$disabled-color};
       --#{$prefix}btn-disabled-bg: #{$disabled-background};
