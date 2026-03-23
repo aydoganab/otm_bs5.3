@@ -319,35 +319,82 @@ $otm-button-colors: (
         "secondary":  $secondary,
 );
 
+// icon buttons
 @each $color-bi, $value in $otm-button-colors{
-  $background: transparent;
+  /*$background: transparent;
   $border: transparent;
   $color: $value;
   $hover-color: shade-color($value, 15%);
   $hover-background: tint-color($value, 85%);
   $hover-border: $hover-background;
   $active-color: shade-color($value, 35%);
-  //$active-color: color-contrast($hover-background);
   $active-background: tint-color($value, 70%);
   $active-border: $active-background;
   $disabled-color: tint-color($value, 10%);
   $disabled-background: $background;
-  $disabled-border: $border;
-  .btn-icon-#{$color-bi}{
-    --#{$prefix}btn-color: #{$color};
-    --#{$prefix}btn-bg: #{$background};
-    --#{$prefix}btn-border-color: #{$border};
-    --#{$prefix}btn-hover-color: #{$hover-color};
-    --#{$prefix}btn-hover-bg: #{$hover-background};
-    --#{$prefix}btn-hover-border-color: #{$hover-border};
-    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
-    --#{$prefix}btn-active-color: #{$active-color};
-    --#{$prefix}btn-active-bg: #{$active-background};
-    --#{$prefix}btn-active-border-color: #{$active-border};
-    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-    --#{$prefix}btn-disabled-color: #{$disabled-color};
-    --#{$prefix}btn-disabled-bg: #{$disabled-background};
-    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  $disabled-border: $border;*/
+
+  $background: transparent;
+  $border: transparent;
+  $color: $value;
+
+  $hover-color: shade-color($color, 15%);
+  $hover-background: tint-color($color, 85%);
+  $hover-border: $hover-background;
+  $active-color: shade-color($color, 35%);
+  $active-background: tint-color($color, 70%);
+  $active-border: $active-background;
+  $disabled-color: tint-color($color, 10%);
+  $disabled-background: tint-color($color, 90%);
+  $disabled-border: $disabled-background;
+
+  $color-mode-type: data;
+  @include color-mode(light) {
+    .btn-icon-#{$color-bi} {
+      --#{$prefix}btn-color: #{$color};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border};
+      --#{$prefix}btn-hover-color: #{$hover-color};
+      --#{$prefix}btn-hover-bg: #{$hover-background};
+      --#{$prefix}btn-hover-border-color: #{$hover-border};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color};
+      --#{$prefix}btn-active-bg: #{$active-background};
+      --#{$prefix}btn-active-border-color: #{$active-border};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+    }
+  }
+
+  $color-dark:if($color-bi != "dark", tint-color($color, 10%), $gray-400);
+  $hover-background-dark: if($color-bi != "dark", shade-color($color-dark, 30%), $gray-300);
+  $hover-color-dark: color-contrast($hover-background-dark);
+  $hover-border-dark: $hover-background-dark;
+  $active-background-dark: shade-color($color-dark, 20%);
+  $active-color-dark: color-contrast($active-background-dark);
+  $active-border-dark: $active-background-dark;
+  $disabled-background-dark: if($color-bi != "dark", shade-color($color-dark, 50%), $gray-500);
+  $disabled-color-dark: shade-color(color-contrast($disabled-background-dark), 40%);
+  @include color-mode(dark) {
+    .btn-icon-#{$color-bi} {
+      --#{$prefix}btn-font-weight: #{$font-weight-medium};
+      --#{$prefix}btn-color: #{$color-dark};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border};
+      --#{$prefix}btn-hover-color: #{$hover-color-dark};
+      --#{$prefix}btn-hover-bg: #{$hover-background-dark};
+      --#{$prefix}btn-hover-border-color: #{$hover-border-dark};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color-dark, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color-dark};
+      --#{$prefix}btn-active-bg: #{$active-background-dark};
+      --#{$prefix}btn-active-border-color: #{$active-border-dark};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color-dark};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background-dark};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-background-dark};
+    }
   }
 }
 
@@ -361,7 +408,6 @@ $otm-button-colors: (
   $hover-background: tint-color($color, 90%);
   $hover-border: $hover-background;
   $active-color: shade-color($color, 20%);
-  //$active-color: color-contrast($hover-background);
   $active-background: tint-color($color, 80%);
   $active-border: $background;
   $disabled-color: tint-color($color, 10%);
@@ -396,6 +442,8 @@ $otm-button-colors: (
   $active-background-dark: shade-color($color-dark, 20%);
   $active-color-dark: color-contrast($active-background-dark);
   $active-border-dark: $active-background-dark;
+  $disabled-background-dark: if($color-fl != "dark", shade-color($color-dark, 50%), $gray-500);
+  $disabled-color-dark: shade-color(color-contrast($disabled-background-dark), 40%);
   @include color-mode(dark) {
     .btn-flat-#{$color-fl} {
       --#{$prefix}btn-font-weight: #{$font-weight-medium};
@@ -410,9 +458,9 @@ $otm-button-colors: (
       --#{$prefix}btn-active-bg: #{$active-background-dark};
       --#{$prefix}btn-active-border-color: #{$active-border-dark};
       --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-      --#{$prefix}btn-disabled-color: #{$disabled-color};
-      --#{$prefix}btn-disabled-bg: #{$disabled-background};
-      --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+      --#{$prefix}btn-disabled-color: #{$disabled-color-dark};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background-dark};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-background-dark};
     }
   }
 }
@@ -420,38 +468,68 @@ $otm-button-colors: (
 //reduced buttons
 @each $color-rd, $value in $otm-button-colors{
   $background: transparent;
+
   $border: tint-color($value, 65%);
-  //$border: $gray-400;
   $color: $value;
   $hover-color: shade-color($value, 15%);
   $hover-background: tint-color($value, 95%);
   $hover-border:shift-color($border, 10%);
-  //$hover-border:$border;
   $active-color: shade-color($value, 30%);
-  //$active-color: color-contrast($hover-background);
   $active-background: tint-color($value, 85%);
-  //$active-border: $border;
-  //$active-border: shift-color($active-background, 20%);
   $active-border: $hover-border;
   $disabled-color: tint-color($value, 10%);
   $disabled-background: $background;
   $disabled-border: $border;
-  .btn-reduced-#{$color-rd}{
-    --#{$prefix}btn-font-weight: 500;
-    --#{$prefix}btn-color: #{$color};
-    --#{$prefix}btn-bg: #{$background};
-    --#{$prefix}btn-border-color: #{$border};
-    --#{$prefix}btn-hover-color: #{$hover-color};
-    --#{$prefix}btn-hover-bg: #{$hover-background};
-    --#{$prefix}btn-hover-border-color: #{$hover-border};
-    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
-    --#{$prefix}btn-active-color: #{$active-color};
-    --#{$prefix}btn-active-bg: #{$active-background};
-    --#{$prefix}btn-active-border-color: #{$active-border};
-    --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-    --#{$prefix}btn-disabled-color: #{$disabled-color};
-    --#{$prefix}btn-disabled-bg: #{$disabled-background};
-    --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+
+  $color-mode-type: data;
+  @include color-mode(light) {
+    .btn-reduced-#{$color-rd} {
+      --#{$prefix}btn-font-weight: 500;
+      --#{$prefix}btn-color: #{$color};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border};
+      --#{$prefix}btn-hover-color: #{$hover-color};
+      --#{$prefix}btn-hover-bg: #{$hover-background};
+      --#{$prefix}btn-hover-border-color: #{$hover-border};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color};
+      --#{$prefix}btn-active-bg: #{$active-background};
+      --#{$prefix}btn-active-border-color: #{$active-border};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background};
+      --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+    }
+  }
+
+  $border-dark: if($color-rd != "dark", tint-color($value, 20%), tint-color($value, 30%));
+  $color-dark:if($color-rd != "dark", tint-color($color, 10%), $gray-400);
+  $hover-background-dark: if($color-rd != "dark", shade-color($color-dark, 75%), $gray-800);
+  $hover-color-dark: shade-color(color-contrast($hover-background-dark), 10%);
+  $hover-border-dark: $border-dark;
+  $active-background-dark: tint-color($hover-background-dark, 10%);
+  $active-color-dark: color-contrast($active-background-dark);
+  $active-border-dark: $border-dark;
+  $disabled-background-dark: if($color-rd != "dark", $active-background-dark, $gray-800);
+  $disabled-color-dark: shade-color(color-contrast($disabled-background-dark), 40%);
+  @include color-mode(dark) {
+    .btn-reduced-#{$color-rd} {
+      --#{$prefix}btn-font-weight: #{$font-weight-medium};
+      --#{$prefix}btn-color: #{$color-dark};
+      --#{$prefix}btn-bg: #{$background};
+      --#{$prefix}btn-border-color: #{$border-dark};
+      --#{$prefix}btn-hover-color: #{$hover-color-dark};
+      --#{$prefix}btn-hover-bg: #{$hover-background-dark};
+      --#{$prefix}btn-hover-border-color: #{$hover-border-dark};
+      --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color-dark, $border, 15%))};
+      --#{$prefix}btn-active-color: #{$active-color-dark};
+      --#{$prefix}btn-active-bg: #{$active-background-dark};
+      --#{$prefix}btn-active-border-color: #{$active-border-dark};
+      --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+      --#{$prefix}btn-disabled-color: #{$disabled-color-dark};
+      --#{$prefix}btn-disabled-bg: #{$disabled-background-dark};
+      --#{$prefix}btn-disabled-border-color: #{$border-dark};
+    }
   }
 }
 
